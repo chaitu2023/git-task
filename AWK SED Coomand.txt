@@ -1,0 +1,52 @@
+SED-Command
+To replace a text from file at run time
+SED command is a powerful text editor, can we do insert,deletion,seacrh and replace.
+
+Exmaple 1: Replacing or substituting string
+Command: $sed 's/oldstring/new string/' file name
+
+Example 2: Replacing the nth occurrence of a pattern in a line
+COmmand : $ sed 's/oldstring/new string/2'filename
+
+Exmaple 3: Replacing all the occurrence of the pattern in a line
+Command: $sed 's/old string/new string/g' filename
+
+Example 4: Replacing from nth occurrence to all occurrences in a line
+Command: $sed 's'old string/new string/3g' filename
+
+Exmaple 5 : Parenthesize first character of each word
+Command: $echo "Welcome To The Geek Stuff" | sed 's/\(\b[A-Z]\)/\(\1\)/g
+
+Example 6: Replacing string on a specific line number 
+Command: $sed '3 s/old string/new string/' filename
+
+Example 7: Duplicating the replaced line with /p flag
+Command: $sed 's/old string/new string/p' filename
+
+Example 8: Printing only the replaced lines
+Command: $sed -n 's/old string/new string/p' filename
+
+Example 9: Replacing string on a range of lines
+Command: $sed '1,3 s/old string/new string/' filename
+
+Example 10: Deleting lines from a particular file
+Command: sed 'nd' filename
+
+
+AWK Command
+
+Descrption: Using this command prints every line of data from the specified file.  
+
+Synatx: $ awk '{print}' filename.txt
+
+Example 2: Print the lines which match the given pattern
+Synatx: $ awk '/manager/ {print}' filename.txt
+
+Example 3 : Splitting a Line Into Fields
+Synatx: $ awk '{print $1,$4}' filename.txt
+
+Example 4: to display Last Field
+Syntax: $ awk '{print $1,$NF}' filename.txt
+
+Example 5 : To Display Line Number
+Syntax: $ awk '{print NR,$0}' employee.txt 
